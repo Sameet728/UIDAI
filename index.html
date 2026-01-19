@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadhaar Insights </title>
+    <title>Aadhaar Insights Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link
@@ -92,294 +92,242 @@
         </div>
     </div>
 
-<nav class="fixed w-full z-50 top-0 transition-all duration-300 glass shadow-sm/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center py-3 md:h-20 gap-4 md:gap-0">
-            
-            <div class="flex items-center gap-3 self-start md:self-auto">
-                
-                <div class="flex items-center gap-3">
-                    <img src="./image.png" alt="Aadhaar Logo" class="h-10 shrink-0">
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass shadow-sm/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center py-3 md:h-20 gap-4 md:gap-0">
 
-                    <div class="leading-tight">
-                        <span class="font-display font-bold text-xl tracking-tight text-slate-900">
-                            UIDAI<span class="text-indigo-600"> Data Hackathon</span>
-                        </span>
-                        <p class="hidden xs:block text-[10px] text-slate-500 font-medium tracking-wider uppercase">
-                            Enterprise Analytics
-                        </p>
+                <div class="flex items-center gap-3 self-start md:self-auto">
+                    <div class="flex items-center gap-3">
+                        <img src="./image.png" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/c/cf/Aadhaar_Logo.svg'" alt="Aadhaar Logo" class="h-10 shrink-0">
+                        <div class="leading-tight">
+                            <span class="font-display font-bold text-xl tracking-tight text-slate-900">
+                                UIDAI<span class="text-indigo-600"> Data Hackathon</span>
+                            </span>
+                            <p class="hidden xs:block text-[10px] text-slate-500 font-medium tracking-wider uppercase">
+                                Enterprise Analytics
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center w-full md:w-auto">
+                    <div
+                        class="relative bg-slate-100 p-1.5 rounded-full flex shadow-inner w-full md:w-[480px] h-12 items-center border border-slate-200">
+
+                        <div id="nav-slider"
+                            class="absolute left-1.5 top-1.5 w-[calc(25%-4px)] h-[calc(100%-12px)] bg-white rounded-full shadow-md shadow-slate-200/50 transition-all duration-300 ease-out">
+                        </div>
+
+                        <button onclick="switchTab('tableau')" id="nav-btn-tableau"
+                            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-indigo-600 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
+                            <span>📊</span> <span class="truncate">Tableau</span>
+                        </button>
+
+                        <button onclick="switchTab('sql')" id="nav-btn-sql"
+                            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
+                            <span>💾</span> <span class="truncate">SQL</span>
+                        </button>
+
+                        <button onclick="switchTab('python')" id="nav-btn-python"
+                            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
+                            <span>🐍</span> <span class="truncate">Python</span>
+                        </button>
+
+                        <button onclick="switchTab('predictive')" id="nav-btn-predictive"
+                            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
+                            <span>📈</span> <span class="truncate">Predictive</span>
+                        </button>
+
                     </div>
                 </div>
 
             </div>
-
-            <div class="flex items-center w-full md:w-auto">
-    <div
-        class="relative bg-slate-100 p-1.5 rounded-full flex shadow-inner w-full md:w-[480px] h-12 items-center border border-slate-200">
-
-        <div id="nav-slider"
-            class="absolute left-1.5 top-1.5 w-[calc(25%-4px)] h-[calc(100%-12px)] bg-white rounded-full shadow-md shadow-slate-200/50 transition-all duration-300 ease-out">
         </div>
-
-        <button onclick="switchTab('tableau')" id="nav-btn-tableau"
-            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-indigo-600 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
-            <span>📊</span> <span class="truncate">Tableau</span>
-        </button>
-
-        <button onclick="switchTab('sql')" id="nav-btn-sql"
-            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
-            <span>💾</span> <span class="truncate">SQL</span>
-        </button>
-
-        <button onclick="switchTab('python')" id="nav-btn-python"
-            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
-            <span>🐍</span> <span class="truncate">Python</span>
-        </button>
-
-        <button onclick="switchTab('predictive')" id="nav-btn-predictive"
-            class="relative z-10 w-1/4 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors duration-300 h-full flex items-center justify-center gap-1 sm:gap-2 uppercase tracking-wide font-display">
-            <span>📈</span> <span class="truncate">Predictive</span>
-        </button>
-
-    </div>
-</div>
-
-        </div>
-    </div>
-</nav>
+    </nav>
 
 
     <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen">
 
         <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
-            
             <h1
                 class="text-5xl md:text-6xl font-display font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-                Aadhaar 
+                Aadhaar
                 <span
                     class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600">Insights
-</span>
+                </span>
             </h1>
         </div>
 
         <div id="content-tableau" class="transition-all duration-500 ease-in-out opacity-100 block space-y-8">
 
-
-
             <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-    style="animation-delay: 0.1s;">
+                style="animation-delay: 0.1s;">
 
-    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-            <span class="text-lg">💡</span>
-        </div>
-        <div>
-            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                Key Insights
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                •	Aadhaar	service	demand	in	most	districts	is	driven	more	by	demographic	and	biometric	updates	than	by	new	enrolments.
-                <br>
-•	Update	pressure	is	uneven	across	districts,	identifying	areas	with	higher	operational	workload. <br>
-•	Demand	volatility	highlights	the	need	for	ongoing	monitoring	and	flexible	deployment	of	staff	and	resources.
-            </p>
-        </div>
-    </div>
+                <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+                    <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                        <span class="text-lg">💡</span>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                            Key Insights
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • Aadhaar service demand in most districts is driven more by demographic and biometric updates than by new enrolments.<br>
+                            • Update pressure is uneven across districts, identifying areas with higher operational workload.<br>
+                            • Demand volatility highlights the need for ongoing monitoring and flexible deployment of staff and resources.
+                        </p>
+                    </div>
+                </div>
 
-    <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-        <div class='tableauPlaceholder w-full flex justify-center' id='viz1768390086190' style='position: relative'>
-            <noscript>
-                <a href='#'>
-                    <img alt='Aadhaar Service Demand'
-                        src='https://public.tableau.com/static/images/9R/9RCB3QHG5/1_rss.png'
-                        style='border: none' />
-                </a>
-            </noscript>
-            <object class='tableauViz' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='path' value='shared/9RCB3QHG5' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image'
-                    value='https://public.tableau.com/static/images/9R/9RCB3QHG5/1.png' />
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='language' value='en-US' />
-            </object>
-        </div>
-    </div>
+                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
+                   <div class='tableauPlaceholder' id='viz1768844584482' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;S2&#47;S2XTRSXYT&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;S2XTRSXYT' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;S2&#47;S2XTRSXYT&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1768844584482');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1200px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='850px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1200px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='850px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='1600px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
 
-    <div
-        class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                    <div class="md:w-1/2 pt-4 md:pt-0">
+                        <h4 class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span>⚠️</span> Problem Statement
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • <strong>Operational overload</strong> due to high volume of Aadhaar updates compared to new enrolments. <br>
+                            • <strong>Uneven district-wise workload</strong>, causing inefficiencies and service delays in high-pressure areas. <br>
+                            • <strong>Unpredictable demand volatility</strong>, making static staffing and infrastructure insufficient.
+                        </p>
+                    </div>
 
-        <div class="md:w-1/2 pt-4 md:pt-0">
-            <h4
-                class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                <span>⚠️</span> Problem Statement
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • <strong>Operational overload</strong> due to high volume of Aadhaar updates compared to new enrolments. <br>
-                • <strong>Uneven district-wise workload</strong>, causing inefficiencies and service delays in high-pressure areas. <br>
-                • <strong>Unpredictable demand volatility</strong>, making static staffing and infrastructure insufficient.
-            </p>
-        </div>
-
-        <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
-            <h4
-                class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                <span>🚀</span> Proposed Solution
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • <Strong>Focus more on update services</Strong> since most Aadhaar demand comes from demographic and biometric updates, not new enrolments. <br>
-                • <strong>Allocate staff and resources based on district demand</strong>, giving more support to high-pressure districts instead of using a one-size-fits-all approach. <br>
-                • <strong>Monitor demand regularly and respond quickly</strong> by deploying mobile units or extending service hours when update pressure increases.
-            </p>
-        </div>
-    </div>
-</div>
-
-
+                    <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
+                        <h4 class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span>🚀</span> Proposed Solution
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • <strong>Focus more on update services</strong> since most Aadhaar demand comes from demographic and biometric updates, not new enrolments. <br>
+                            • <strong>Allocate staff and resources based on district demand</strong>, giving more support to high-pressure districts. <br>
+                            • <strong>Monitor demand regularly</strong> and respond quickly by deploying mobile units.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <br>
 
-            
             <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-    style="animation-delay: 0.1s;">
+                style="animation-delay: 0.1s;">
 
-    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-            <span class="text-lg">💡</span>
-        </div>
-        <div>
-            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                Key Insights
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                •	Most Aadhaar activity comes from updates, not new enrolments.
-                <br>
-•	Service load is uneven across districts. <br>
-•	Transaction volumes show high monthly fluctuations.
-            </p>
-        </div>
-    </div>
+                <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+                    <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                        <span class="text-lg">💡</span>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                            Key Insights
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • Most Aadhaar activity comes from updates, not new enrolments.<br>
+                            • Service load is uneven across districts.<br>
+                            • Transaction volumes show high monthly fluctuations.
+                        </p>
+                    </div>
+                </div>
 
-    <div class='tableauPlaceholder' id='viz1768830741837' style='position: relative'><noscript><a href='#'><img alt='Aadhaar Operations Health &amp; Risk Monitor ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ui&#47;Uidai&#47;AadhaarOperationsHealthRiskMonitor&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Uidai&#47;AadhaarOperationsHealthRiskMonitor' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ui&#47;Uidai&#47;AadhaarOperationsHealthRiskMonitor&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1768830741837');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1700px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1700px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1577px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
+                    <div class='tableauPlaceholder' id='viz-tableau-2' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='Aadhaar Operations Health &amp; Risk Monitor' src='https://public.tableau.com/static/images/Ui/Uidai/AadhaarOperationsHealthRiskMonitor/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='Uidai/AadhaarOperationsHealthRiskMonitor' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/Ui/Uidai/AadhaarOperationsHealthRiskMonitor/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                </div>
 
-    <div
-        class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-
-        <div class="md:w-1/2 pt-4 md:pt-0">
-            <h4
-                class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                <span>⚠️</span> Problem Statement
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • Records can become outdated, causing verification issues.<br>
-                • Some districts face overcrowding and delays. <br>
-                • Sudden demand spikes strain infrastructure.
-            </p>
-        </div>
-
-        <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
-            <h4
-                class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                <span>🚀</span> Proposed Solution
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • <STRong>Use machine learning to predict</STRong> users likely to need Aadhaar updates and automatically send SMS/app alerts. <br>
-                • <STRong>Continuously analyze district-level data</STRong> to dynamically redistribute staff, devices, and appointment slots.<br>
-                • <STRong>Apply time-series forecasting</STRong> to predict demand spikes and trigger early alerts for capacity scaling.
-            </p>
-        </div>
-    </div>
-</div>
-
-
-            
+                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                    <div class="md:w-1/2 pt-4 md:pt-0">
+                        <h4 class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span>⚠️</span> Problem Statement
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • Records can become outdated, causing verification issues.<br>
+                            • Some districts face overcrowding and delays. <br>
+                            • Sudden demand spikes strain infrastructure.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
+                        <h4 class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span>🚀</span> Proposed Solution
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • <strong>Use machine learning to predict</strong> users likely to need Aadhaar updates.<br>
+                            • <strong>Continuously analyze district-level data</strong> to dynamically redistribute staff.<br>
+                            • <strong>Apply time-series forecasting</strong> to predict demand spikes.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <br>
-
-               <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-    style="animation-delay: 0.1s;">
-
-    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-            <span class="text-lg">💡</span>
-        </div>
-        <div>
-            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                Key Insights
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • Some states show sudden date-specific spikes in update activity while their long-term average remains stable.
-                <br>
-•	Certain states exhibit consistently high demographic updates but low biometric updates across time. <br>
-•	Demand volatility is clustered around specific dates in only a few states rather than being uniformly distributed.
-            </p>
-        </div>
-    </div>
-
-    <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-        <div class='tableauPlaceholder w-full flex justify-center' id='viz1768390086190' style='position: relative'>
-            <noscript>
-                <a href='#'>
-                    <img alt='Aadhaar Service Demand'
-                        src='https://public.tableau.com/static/images/9R/9RCB3QHG5/1_rss.png'
-                        style='border: none' />
-                </a>
-            </noscript>
-            <object class='tableauViz' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='path' value='shared/9RCB3QHG5' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image'
-                    value='https://public.tableau.com/static/images/9R/9RCB3QHG5/1.png' />
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='language' value='en-US' />
-            </object>
-        </div>
-    </div>
-
-    <div
-        class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-
-        <div class="md:w-1/2 pt-4 md:pt-0">
-            <h4
-                class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                <span>⚠️</span> Problem Statement
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • Short-term demand surges are missed by monthly or state-level planning, causing temporary service overload and inconvenience to citizens.<br>
-                • Partial data freshness persists, with biometric records remaining outdated, increasing the risk of future authentication failures. <br>
-                • Static staffing models cannot handle date-specific demand spikes, leading to avoidable delays and service backlogs.
-            </p>
-        </div>
-
-        <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
-            <h4
-                class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                <span>🚀</span> Proposed Solution
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • <STRong>Self-learning surge sentinel</STRong> to auto-detect abnormal demand and trigger instant operational actions. <br>
-                • <STRong>Aadhaar health score engine</STRong> to monitor biometric freshness and auto-initiate update alerts.<br>
-                • <STRong>Adaptive capacity orchestration system</STRong> to autonomously scale staff, devices, and appointments using demand predictions.
-            </p>
-        </div>
-    </div>
-</div>
-
-             
-
             
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+
+                <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+                    <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                        <span class="text-lg">💡</span>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                            Key Insights
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • Some states show sudden date-specific spikes in update activity.<br>
+                            • Certain states exhibit consistently high demographic updates but low biometric updates.<br>
+                            • Demand volatility is clustered around specific dates.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
+                    <img src="/dashboard3.png" alt="">
+                </div>
+
+                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                    <div class="md:w-1/2 pt-4 md:pt-0">
+                        <h4 class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span>⚠️</span> Problem Statement
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • Short-term demand surges are missed by monthly planning.<br>
+                            • Partial data freshness persists.<br>
+                            • Static staffing models cannot handle date-specific demand spikes.
+                        </p>
+                    </div>
+
+                    <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
+                        <h4 class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span>🚀</span> Proposed Solution
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            • <strong>Self-learning surge sentinel</strong> to auto-detect abnormal demand.<br>
+                            • <strong>Aadhaar health score engine</strong> to monitor biometric freshness.<br>
+                            • <strong>Adaptive capacity orchestration system</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div id="content-sql" class="hidden opacity-0 transition-all duration-500 ease-in-out">
@@ -419,382 +367,381 @@
                     ];
 
                     document.write(sqlQueries.map((q, index) => `
-    <div class="glass-card rounded-2xl p-2 overflow-hidden animate-fade-in-up" style="animation-delay: ${index * 0.1}s">
-        <div class="bg-white rounded-xl p-6">
-            <div class="flex flex-col lg:flex-row gap-7">
-                
-                <div class="lg:w-5/12 space-y-5 flex flex-col justify-center">
-                    
-                    <div class="flex items-center gap-3">
-                        <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider">
-                            Query ${index + 1}
-                        </span>
-                        <h3 class="font-display font-bold text-xl text-slate-900 leading-tight">
-                            ${q.title}
-                        </h3>
-                    </div>
-
-                    <div class="border-l-2 border-indigo-500 pl-5 py-1">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1.5">
-                            Problem Statement
-                        </h4>
-                        <p class="text-base text-slate-700 font-medium leading-snug">
-                            ${q.desc}
-                        </p>
-                    </div>
-
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                        <h4 class="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-2">
-                            Insight & Solution
-                        </h4>
-                        <p class="text-sm text-slate-600 mb-2">
-                            <strong class="text-slate-800">Insight:</strong> ${q.insight}
-                        </p>
-                        <p class="text-sm text-slate-600">
-                            <strong class="text-slate-800">Solution:</strong> ${q.solution}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lg:w-7/12 relative group">
-                    <div class="flex justify-between items-center mb-3 px-1">
-                       
-                        <div class="flex items-center gap-2">
-                            <button onclick="toggleDataView(${index}, 'table')" 
-                                class="text-xs font-bold px-4 py-1.5 rounded-full transition-colors bg-indigo-100 text-indigo-700"
-                                id="btn-table-${index}">
-                                Table
-                            </button>
-                            <button onclick="toggleDataView(${index}, 'graph')" 
-                                class="text-xs font-bold px-4 py-1.5 rounded-full transition-colors bg-white text-slate-500 hover:bg-slate-100"
-                                id="btn-graph-${index}">
-                                Graph
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl border border-slate-200 bg-white shadow-sm h-72 overflow-hidden relative">
-                        
-                        <div id="view-table-${index}" class="h-full overflow-auto custom-scroll w-full">
-                            <table class="w-full text-sm text-left text-slate-600 data-table-placeholder">
-                                <thead class="bg-slate-50 sticky top-0 text-slate-900 font-bold border-b border-slate-200"></thead>
-                                <tbody class="divide-y divide-slate-100">
-                                    <tr>
-                                        <td class="p-10 text-center text-slate-500">
-                                            Loading Data...
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div id="view-graph-${index}" class="h-full w-full hidden p-3 flex items-center justify-center bg-white relative">
-                            <div class="absolute inset-0 w-full h-full p-3">
-                                <canvas id="chart-${index}"></canvas>
+                        <div class="glass-card rounded-2xl p-2 overflow-hidden animate-fade-in-up" style="animation-delay: ${index * 0.1}s">
+                            <div class="bg-white rounded-xl p-6">
+                                <div class="flex flex-col lg:flex-row gap-7">
+                                    <div class="lg:w-5/12 space-y-5 flex flex-col justify-center">
+                                        <div class="flex items-center gap-3">
+                                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider">
+                                                Query ${index + 1}
+                                            </span>
+                                            <h3 class="font-display font-bold text-xl text-slate-900 leading-tight">
+                                                ${q.title}
+                                            </h3>
+                                        </div>
+                                        <div class="border-l-2 border-indigo-500 pl-5 py-1">
+                                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1.5">
+                                                Problem Statement
+                                            </h4>
+                                            <p class="text-base text-slate-700 font-medium leading-snug">
+                                                ${q.desc}
+                                            </p>
+                                        </div>
+                                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                            <h4 class="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-2">
+                                                Insight & Solution
+                                            </h4>
+                                            <p class="text-sm text-slate-600 mb-2">
+                                                <strong class="text-slate-800">Insight:</strong> ${q.insight}
+                                            </p>
+                                            <p class="text-sm text-slate-600">
+                                                <strong class="text-slate-800">Solution:</strong> ${q.solution}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-7/12 relative group">
+                                        <div class="flex justify-between items-center mb-3 px-1">
+                                            <span class="text-slate-400 text-xs font-mono">
+                                                Query${index + 1}.csv
+                                            </span>
+                                            <div class="flex items-center gap-2">
+                                                <button onclick="toggleDataView(${index}, 'table')" 
+                                                    class="text-xs font-bold px-4 py-1.5 rounded-full transition-colors bg-indigo-100 text-indigo-700"
+                                                    id="btn-table-${index}">
+                                                    Table
+                                                </button>
+                                                <button onclick="toggleDataView(${index}, 'graph')" 
+                                                    class="text-xs font-bold px-4 py-1.5 rounded-full transition-colors bg-white text-slate-500 hover:bg-slate-100"
+                                                    id="btn-graph-${index}">
+                                                    Graph
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="rounded-xl border border-slate-200 bg-white shadow-sm h-72 overflow-hidden relative">
+                                            <div id="view-table-${index}" class="h-full overflow-auto custom-scroll w-full">
+                                                <table class="w-full text-sm text-left text-slate-600 data-table-placeholder">
+                                                    <thead class="bg-slate-50 sticky top-0 text-slate-900 font-bold border-b border-slate-200"></thead>
+                                                    <tbody class="divide-y divide-slate-100">
+                                                        <tr>
+                                                            <td class="p-10 text-center text-slate-500">
+                                                                Loading Data...
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div id="view-graph-${index}" class="h-full w-full hidden p-3 flex items-center justify-center bg-white relative">
+                                                <div class="absolute inset-0 w-full h-full p-3">
+                                                    <canvas id="chart-${index}"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-`).join(''));
-</script>
-
+                    `).join(''));
+                </script>
             </div>
         </div>
 
         <div id="content-python" class="hidden opacity-0 transition-all duration-500 ease-in-out">
             <div class="space-y-6">
                 <script>
-    const pythonAnalyses = [
-        {
-            title: "Enrollment Shift Toward Lifecycle Updates",
-            desc: "Over-dependence on child enrollments may reduce center utilization as birth rates fluctuate.",
-            insight: "Most Aadhaar enrollments are for children (0–5), while new adult enrollments are very low, showing the system has reached maturity.",
-            solution: "Shift focus to adult update services and automate child-to-adult lifecycle updates using reminder-based digital workflows.",
-            image: "/first.png" // ✅ Your specific image for the first card
-        },
-        {
-            title: "Volatile Demand in a Saturated System",
-            desc: "Sudden demand fluctuations can cause staff overload on peak days and underutilization on low-demand days.",
-            insight: "Enrollment demand is highly irregular with sharp spikes and drops, showing no steady growth and indicating a saturated system.",
-            solution: "Use short-term forecasting and rolling averages to predict peaks in advance and dynamically adjust staffing and system capacity.",
-            image: "/second.png" // 🔄 Currently reusing first image (Change this to './secondimage.png' when ready)
-        },
-        {
-            title: "Rising Biometric Quality Issues",
-            desc: "Detecting fraudulent or erroneous demographic update requests using isolation forest algorithms.",
-            insight: "Many states show high biometric errors, meaning fingerprints and biometrics often fail due to ageing, wear, or poor capture.",
-            solution: "Implemented a rate-limiting API gateway and flagged these records for manual verification.",
-            image: "/third.png" // 🔄 Currently reusing first image (Change this to './thirdimage.png' when ready)
-        },
-        {
-            title: "District-Focused Risk Hotspots",
-            desc: "Using the same policy everywhere wastes resources and delays action in high-risk districts.",
-            insight: "Risk is high in only a few districts, meaning most enrollment–biometric issues are location-specific, not nationwide.",
-            solution: "Use district-level risk scores to plan targeted camps, staffing, and device upgrades only where risk is high.",
-            image: "/fourth.png" // 🔄 Currently reusing first image (Change this to './thirdimage.png' when ready)
-        },
-        {
-            title: "Hidden Teen Enrollment Gap",
-            desc: "Low teen enrollment today can cause identity gaps and higher update pressure in adulthood.",
-            insight: "Most districts have very low teen (5–17) enrollment, which is hidden when only total enrollments are analyzed.",
-            solution: "Launch school-based enrollment drives and track age-wise coverage dashboards to close teen enrollment gaps early.",
-            image: "/fifth.png" // 🔄 Currently reusing first image (Change this to './thirdimage.png' when ready)
-        }
-    ];
+                    const pythonAnalyses = [
+                        {
+                            title: "Enrollment Shift Toward Lifecycle Updates",
+                            desc: "Over-dependence on child enrollments may reduce center utilization as birth rates fluctuate.",
+                            insight: "Most Aadhaar enrollments are for children (0–5), while new adult enrollments are very low, showing the system has reached maturity.",
+                            solution: "Shift focus to adult update services and automate child-to-adult lifecycle updates using reminder-based digital workflows.",
+                            image: "/first.png" 
+                        },
+                        {
+                            title: "Volatile Demand in a Saturated System",
+                            desc: "Sudden demand fluctuations can cause staff overload on peak days and underutilization on low-demand days.",
+                            insight: "Enrollment demand is highly irregular with sharp spikes and drops, showing no steady growth and indicating a saturated system.",
+                            solution: "Use short-term forecasting and rolling averages to predict peaks in advance and dynamically adjust staffing and system capacity.",
+                            image: "/second.png"
+                        },
+                        {
+                            title: "Rising Biometric Quality Issues",
+                            desc: "Detecting fraudulent or erroneous demographic update requests using isolation forest algorithms.",
+                            insight: "Many states show high biometric errors, meaning fingerprints and biometrics often fail due to ageing, wear, or poor capture.",
+                            solution: "Implemented a rate-limiting API gateway and flagged these records for manual verification.",
+                            image: "/third.png"
+                        },
+                        {
+                            title: "District-Focused Risk Hotspots",
+                            desc: "Using the same policy everywhere wastes resources and delays action in high-risk districts.",
+                            insight: "Risk is high in only a few districts, meaning most enrollment–biometric issues are location-specific, not nationwide.",
+                            solution: "Use district-level risk scores to plan targeted camps, staffing, and device upgrades only where risk is high.",
+                            image: "/fourth.png"
+                        },
+                        {
+                            title: "Hidden Teen Enrollment Gap",
+                            desc: "Low teen enrollment today can cause identity gaps and higher update pressure in adulthood.",
+                            insight: "Most districts have very low teen (5–17) enrollment, which is hidden when only total enrollments are analyzed.",
+                            solution: "Launch school-based enrollment drives and track age-wise coverage dashboards to close teen enrollment gaps early.",
+                            image: "/fifth.png"
+                        }
+                    ];
 
-    document.write(pythonAnalyses.map((q, index) => `
-    <div class="glass-card rounded-2xl p-1 overflow-hidden animate-fade-in-up" style="animation-delay: ${index * 0.1}s">
-        <div class="bg-white rounded-xl p-7">
-            <div class="flex flex-col lg:flex-row gap-8">
-                
-                <div class="lg:w-5/12 space-y-5 flex flex-col justify-center">
-                    <div class="flex items-center gap-3">
-                        <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider">${index + 1}</span>
-                        <h3 class="font-display font-bold text-xl text-slate-900 leading-tight">${q.title}</h3>
-                    </div>
-                    
-                    <div class="border-l-2 border-indigo-500 pl-5 py-1">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1.5">Problem Statement</h4>
-                        <p class="text-base text-slate-700 font-medium leading-snug">${q.desc}</p>
-                    </div>
-                    
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                        <h4 class="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-2">Insight & Solution</h4>
-                        <p class="text-sm text-slate-600 mb-2"><strong class="text-slate-800">Insight:</strong> ${q.insight}</p>
-                        <p class="text-sm text-slate-600"><strong class="text-slate-800">Solution:</strong> ${q.solution}</p>
-                    </div>
-                </div>
-
-                <div class="lg:w-7/12 relative group">
-                    <div class="flex justify-between items-center mb-3 px-1">
-                      
-                    </div>
-
-                    <div class="rounded-xl border border-slate-200 bg-slate-50 shadow-sm h-80 overflow-hidden relative flex items-center justify-center">
-                        <img src="${q.image}" 
-                                alt="${q.title} Graph" 
-                                class="h-full object-cover hover:scale-105 transition-transform duration-500">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-`).join(''));
-</script>
+                    document.write(pythonAnalyses.map((q, index) => `
+                        <div class="glass-card rounded-2xl p-1 overflow-hidden animate-fade-in-up" style="animation-delay: ${index * 0.1}s">
+                            <div class="bg-white rounded-xl p-7">
+                                <div class="flex flex-col lg:flex-row gap-8">
+                                    <div class="lg:w-5/12 space-y-5 flex flex-col justify-center">
+                                        <div class="flex items-center gap-3">
+                                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider">${index + 1}</span>
+                                            <h3 class="font-display font-bold text-xl text-slate-900 leading-tight">${q.title}</h3>
+                                        </div>
+                                        <div class="border-l-2 border-indigo-500 pl-5 py-1">
+                                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1.5">Problem Statement</h4>
+                                            <p class="text-base text-slate-700 font-medium leading-snug">${q.desc}</p>
+                                        </div>
+                                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                            <h4 class="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-2">Insight & Solution</h4>
+                                            <p class="text-sm text-slate-600 mb-2"><strong class="text-slate-800">Insight:</strong> ${q.insight}</p>
+                                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Solution:</strong> ${q.solution}</p>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-7/12 relative group">
+                                        <div class="flex justify-between items-center mb-3 px-1">
+                                           
+                                        </div>
+                                        <div class="rounded-xl border border-slate-200 bg-slate-50 shadow-sm h-80 overflow-hidden relative flex items-center justify-center">
+                                            <img src="${q.image}" 
+                                                onerror="this.src='https://placehold.co/600x400?text=Python+Analysis+${index+1}'"
+                                                alt="${q.title} Graph" 
+                                                class="h-full object-cover hover:scale-105 transition-transform duration-500">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join(''));
+                </script>
             </div>
         </div>
 
-        <div id="content-predictive" class="transition-all duration-500 ease-in-out opacity-100 block space-y-8">
-    
-             <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-    style="animation-delay: 0.1s;">
+        <div id="content-predictive" class="hidden opacity-0 transition-all duration-500 ease-in-out space-y-8">
 
-   
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
+                    <div class='tableauPlaceholder' id='viz-predictive-1' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='Predictive Analysis: State-wise Total Enrollment' src='https://public.tableau.com/static/images/8Q/8Q99R7YGQ/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='path' value='shared/8Q99R7YGQ' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/8Q/8Q99R7YGQ/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                </div>
+                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                            <span class="text-lg">💡</span>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                                Key Insights
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                • The forecast shows a strong geographic concentration of enrollments, with Uttar Pradesh emerging as the highest-demand state, indicating sustained population-driven service pressure.<br>
+                                • Southern and western states display moderate but stable predicted volumes, suggesting balanced growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-       <div class='tableauPlaceholder' id='viz1768839828549' style='position: relative'><noscript><a href='#'><img alt='Predictive Analysis: State-wise Total Enrollment ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;8Q&#47;8Q99R7YGQ&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;8Q99R7YGQ' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;8Q&#47;8Q99R7YGQ&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1768839828549');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
+            <br>
 
-    <div
-        class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
+                    <div class='tableauPlaceholder' id='viz-predictive-2' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='Predictive Analysis : Statewise Total Biometric Updates' src='https://public.tableau.com/static/images/SZ/SZ9XYHQMP/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='path' value='shared/SZ9XYHQMP' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/SZ/SZ9XYHQMP/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                </div>
+                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                            <span class="text-lg">💡</span>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                                Key Insights
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                • The forecast highlights extreme concentration of biometric update demand in high-population states like Uttar Pradesh and Maharashtra.<br>
+                                • Mid-tier states show balanced, predictable volumes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-       
+            <br>
 
-        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-            <span class="text-lg">💡</span>
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
+                    <div class='tableauPlaceholder' id='viz-predictive-3' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='Predictive Analysis: Statewise Total Demographics Updates' src='https://public.tableau.com/static/images/Pr/PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/Pr/PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                </div>
+                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+                    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                            <span class="text-lg">💡</span>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                                Key Insights
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                • A few large states dominate demographic update demand due to population size and frequent lifecycle changes. <br>
+                                • Smaller states and UTs have low but stable demand.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div>
-            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                Key Insights
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • The forecast shows a strong geographic concentration of enrollments, with Uttar Pradesh emerging as the highest-demand state, indicating sustained population-driven service pressure.
-                <br>
-• Southern and western states display moderate but stable predicted volumes, suggesting balanced growth, while lower-intensity regions may require targeted outreach rather than capacity expansion.
-            </p>
-        </div>
-    </div>
-    </div>
-</div>
-
-<br>
-
-   <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-    style="animation-delay: 0.1s;">
-
-   
-
-    <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-       <div class='tableauPlaceholder' id='viz1768840079972' style='position: relative'><noscript><a href='#'><img alt='Predictive Analysis : Statewise Total Biometric Updates ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SZ&#47;SZ9XYHQMP&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;SZ9XYHQMP' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SZ&#47;SZ9XYHQMP&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1768840079972');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
-
-    <div
-        class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-
-       
-
-        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-            <span class="text-lg">💡</span>
-        </div>
-        <div>
-            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                Key Insights
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • The forecast highlights extreme concentration of biometric update demand in high-population states like Uttar Pradesh and Maharashtra, signaling sustained system load and the need for priority infrastructure scaling. <br>
-• Mid-tier states show balanced, predictable volumes, while low-demand regions suggest opportunities for mobile units and cost-efficient deployment rather than permanent capacity expansion.
-            </p>
-        </div>
-    </div>
-    </div>
-</div>
-
-<br>
-
-
- <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-    style="animation-delay: 0.1s;">
-
-   
-
-    <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-       <div class='tableauPlaceholder' id='viz1768840261843' style='position: relative'><noscript><a href='#'><img alt='Predictive Analysis: Statewise Total Demographics Updates ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;PredictiveAnalysisStatewiseTotalDemographicsUpdates&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PredictiveAnalysisStatewiseTotalDemographicsUpdates&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;PredictiveAnalysisStatewiseTotalDemographicsUpdates&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1768840261843');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
-
-    <div
-        class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-
-       
-
-        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-            <span class="text-lg">💡</span>
-        </div>
-        <div>
-            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                Key Insights
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-                • A few large states dominate demographic update demand due to population size and frequent lifecycle changes. <br>
-• Smaller states and UTs have low but stable demand, best served through centralized or periodic service models.
-            </p>
-        </div>
-    </div>
-    </div>
-</div>
-     
-</div>
-
 
     </main>
 
     <footer class="mt-auto border-t border-slate-200 bg-white/50 backdrop-blur-md z-10 relative py-8">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center gap-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center gap-4">
             <p class="text-slate-400 text-sm font-medium">
                 &copy; 2026 Aadhaar Insights Pro.
             </p>
-          
         </div>
     </footer>
 
     <script type='text/javascript'>
+        
         // --- 1. Tab Switching Logic ---
-      function switchTab(tabName) {
-    const contentTableau = document.getElementById('content-tableau');
-    const contentSql = document.getElementById('content-sql');
-    const contentPython = document.getElementById('content-python');
-    const contentPredictive = document.getElementById('content-predictive');
+        function switchTab(tabName) {
+            const contentTableau = document.getElementById('content-tableau');
+            const contentSql = document.getElementById('content-sql');
+            const contentPython = document.getElementById('content-python');
+            const contentPredictive = document.getElementById('content-predictive');
 
-    const btnTableau = document.getElementById('nav-btn-tableau');
-    const btnSql = document.getElementById('nav-btn-sql');
-    const btnPython = document.getElementById('nav-btn-python');
-    const btnPredictive = document.getElementById('nav-btn-predictive');
+            const btnTableau = document.getElementById('nav-btn-tableau');
+            const btnSql = document.getElementById('nav-btn-sql');
+            const btnPython = document.getElementById('nav-btn-python');
+            const btnPredictive = document.getElementById('nav-btn-predictive');
 
-    const slider = document.getElementById('nav-slider');
+            const slider = document.getElementById('nav-slider');
 
-    const allContents = [
-        contentTableau,
-        contentSql,
-        contentPython,
-        contentPredictive
-    ];
+            const allContents = [contentTableau, contentSql, contentPython, contentPredictive];
+            const allBtns = [btnTableau, btnSql, btnPython, btnPredictive];
 
-    const allBtns = [
-        btnTableau,
-        btnSql,
-        btnPython,
-        btnPredictive
-    ];
+            /* Reset buttons */
+            allBtns.forEach(btn => {
+                btn.classList.remove('text-indigo-600');
+                btn.classList.add('text-slate-500');
+            });
 
-    /* Reset buttons */
-    allBtns.forEach(btn => {
-        btn.classList.remove('text-indigo-600');
-        btn.classList.add('text-slate-500');
-    });
+            /* Hide all content */
+            allContents.forEach(content => {
+                content.classList.add('opacity-0');
+                content.classList.add('hidden'); // Immediate hide
+            });
 
-    /* Hide all content */
-    allContents.forEach(content => {
-        content.classList.add('opacity-0');
-        setTimeout(() => content.classList.add('hidden'), 300);
-    });
+            /* Switch logic */
+            if (tabName === 'tableau') {
+                slider.style.transform = 'translateX(0%)';
+                btnTableau.classList.add('text-indigo-600');
+                btnTableau.classList.remove('text-slate-500');
 
-    /* Switch logic */
-    if (tabName === 'tableau') {
-        slider.style.transform = 'translateX(0%)';
-        btnTableau.classList.add('text-indigo-600');
-        btnTableau.classList.remove('text-slate-500');
+                contentTableau.classList.remove('hidden');
+                setTimeout(() => contentTableau.classList.remove('opacity-0'), 10);
+            }
+            else if (tabName === 'sql') {
+                slider.style.transform = 'translateX(100%)';
+                btnSql.classList.add('text-indigo-600');
+                btnSql.classList.remove('text-slate-500');
 
-        setTimeout(() => {
-            contentTableau.classList.remove('hidden');
-            setTimeout(() => contentTableau.classList.remove('opacity-0'), 10);
-        }, 300);
-    } 
-    else if (tabName === 'sql') {
-        slider.style.transform = 'translateX(100%)';
-        btnSql.classList.add('text-indigo-600');
-        btnSql.classList.remove('text-slate-500');
+                contentSql.classList.remove('hidden');
+                setTimeout(() => contentSql.classList.remove('opacity-0'), 10);
+            }
+            else if (tabName === 'python') {
+                slider.style.transform = 'translateX(200%)';
+                btnPython.classList.add('text-indigo-600');
+                btnPython.classList.remove('text-slate-500');
 
-        setTimeout(() => {
-            contentSql.classList.remove('hidden');
-            setTimeout(() => contentSql.classList.remove('opacity-0'), 10);
-        }, 300);
-    }
-    else if (tabName === 'python') {
-        slider.style.transform = 'translateX(200%)';
-        btnPython.classList.add('text-indigo-600');
-        btnPython.classList.remove('text-slate-500');
+                contentPython.classList.remove('hidden');
+                setTimeout(() => contentPython.classList.remove('opacity-0'), 10);
+            }
+            else if (tabName === 'predictive') {
+                slider.style.transform = 'translateX(300%)';
+                btnPredictive.classList.add('text-indigo-600');
+                btnPredictive.classList.remove('text-slate-500');
 
-        setTimeout(() => {
-            contentPython.classList.remove('hidden');
-            setTimeout(() => contentPython.classList.remove('opacity-0'), 10);
-        }, 300);
-    }
-    else if (tabName === 'predictive') {
-        slider.style.transform = 'translateX(300%)';
-        btnPredictive.classList.add('text-indigo-600');
-        btnPredictive.classList.remove('text-slate-500');
-
-         setTimeout(() => {
-        contentPredictive.classList.remove('hidden');
-        setTimeout(() => {
-            contentPredictive.classList.remove('opacity-0');
-            // Removed undefined function call to prevent errors
-            window.dispatchEvent(new Event('resize')); 
-        }, 10);
-    }, 300);
-    }
-}
+                contentPredictive.classList.remove('hidden');
+                setTimeout(() => {
+                    contentPredictive.classList.remove('opacity-0');
+                    // Trigger resize to fix Tableau rendering in hidden tabs
+                    window.dispatchEvent(new Event('resize'));
+                }, 10);
+            }
+        }
 
 
-// --- 2. SQL Toggle: Table vs Graph ---
+        // --- 2. SQL Toggle: Table vs Graph ---
         function toggleDataView(index, viewType) {
             const tableView = document.getElementById(`view-table-${index}`);
             const graphView = document.getElementById(`view-graph-${index}`);
@@ -856,7 +803,7 @@
 
             // Fallback for empty/loading
             if (data.length === 0 || (labels.length === 1 && labels[0] === "Loading Data...")) {
-               return; // Don't render empty chart
+                return;
             }
 
             const ctx = chartCanvas.getContext('2d');
@@ -865,7 +812,7 @@
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: headers[valueIndex] ? headers[valueIndex].innerText.replace(/['"]/g,'') : 'Value',
+                        label: headers[valueIndex] ? headers[valueIndex].innerText.replace(/['"]/g, '') : 'Value',
                         data: data,
                         backgroundColor: 'rgba(79, 70, 229, 0.6)',
                         borderColor: 'rgba(79, 70, 229, 1)',
@@ -887,43 +834,36 @@
             });
         }
 
-        // --- 4. YOUR UPDATED CSV LOADER ---
+        // --- 4. CSV LOADER ---
         async function loadAllSqlTables() {
-            // Get all table elements
             const tables = document.querySelectorAll('.data-table-placeholder');
 
-            // Iterate through each table individually
             tables.forEach(async (table, index) => {
                 try {
-                    // 1. Dynamically create the filename based on the index
-                    // Ensures Index 0 loads Q1.csv, Index 1 loads Q2.csv, etc.
-                    const fileName = `Q${index + 1}.csv`; 
+                    // Dynamically create filename: Q1.csv, Q2.csv, etc.
+                    const fileName = `Q${index + 1}.csv`;
 
                     const response = await fetch(fileName);
                     if (!response.ok) throw new Error(`File ${fileName} not found`);
-                    
+
                     const csvText = await response.text();
                     const lines = csvText.trim().split('\n');
-                    
+
                     if (lines.length === 0) return;
-                    
-                    // 2. Parse Data
+
                     const headers = lines[0].split(',').map(h => h.trim().replace(/['"]/g, ''));
                     const rows = lines.slice(1).map(line => line.split(',').map(c => c.trim().replace(/['"]/g, '')));
 
-                    // 3. Build HTML for THIS specific table
                     let headerHTML = '<thead class="bg-slate-50 sticky top-0 text-slate-900 font-bold border-b border-slate-200"><tr>';
                     headers.forEach(h => headerHTML += `<th class="px-4 py-3 whitespace-nowrap text-[10px] uppercase tracking-wider">${h}</th>`);
                     headerHTML += '</tr></thead>';
 
                     let bodyHTML = '<tbody class="divide-y divide-slate-100">';
                     rows.forEach(row => {
-                        // Basic validation to ensure row matches header length
-                        if (row.length >= headers.length) { 
+                        if (row.length >= headers.length) {
                             bodyHTML += '<tr class="hover:bg-indigo-50/30 transition-colors">';
                             row.forEach((cell, i) => {
-                                // Only process up to the number of headers
-                                if(i < headers.length) {
+                                if (i < headers.length) {
                                     const colorClass = i === 0 ? "text-indigo-700 font-semibold" : "text-slate-600";
                                     bodyHTML += `<td class="px-4 py-2 whitespace-nowrap ${colorClass}">${cell}</td>`;
                                 }
@@ -932,8 +872,6 @@
                         }
                     });
                     bodyHTML += '</tbody>';
-
-                    // 4. Update ONLY the current table element
                     table.innerHTML = headerHTML + bodyHTML;
 
                 } catch (error) {
@@ -941,46 +879,46 @@
                     table.innerHTML = `<tbody><tr><td class="p-4 text-red-500 text-center bg-white">Failed to load Q${index + 1}.csv</td></tr></tbody>`;
                 }
             });
-        } 
-
-        // Initialize Loading
-        loadAllSqlTables();
-
-        // --- Tableau Script Integration ---
-        
-        // 1. Resize FIRST Tableau Dashboard (Main Tab)
-        var divElement = document.getElementById('viz1768390086190');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        
-        if (divElement.offsetWidth > 800) { 
-            vizElement.style.minWidth='100%'; vizElement.style.maxWidth='100%'; vizElement.style.width='100%'; vizElement.style.minHeight='827px'; vizElement.style.maxHeight='887px'; vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-        } else if (divElement.offsetWidth > 500) { 
-            vizElement.style.minWidth='100%'; vizElement.style.maxWidth='100%'; vizElement.style.width='100%'; vizElement.style.minHeight='827px'; vizElement.style.maxHeight='887px'; vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-        } else { 
-            vizElement.style.width='100%'; vizElement.style.height='1627px';
         }
-        
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
-        // 2. Resize PREDICTIVE Tableau Dashboard (Last Tab)
-        // Added this block to specifically handle the size of the Predictive dashboard
-        var divElementPred = document.getElementById('vizPredictive');
-        var vizElementPred = divElementPred.getElementsByTagName('object')[0];
-        
-        if (divElementPred.offsetWidth > 800) { 
-            // Matches sizing of the first dashboard
-            vizElementPred.style.minWidth='100%'; vizElementPred.style.maxWidth='100%'; vizElementPred.style.width='100%'; vizElementPred.style.minHeight='827px'; vizElementPred.style.maxHeight='887px'; vizElementPred.style.height=(divElementPred.offsetWidth*0.75)+'px';
-        } else if (divElementPred.offsetWidth > 500) { 
-            vizElementPred.style.minWidth='100%'; vizElementPred.style.maxWidth='100%'; vizElementPred.style.width='100%'; vizElementPred.style.minHeight='827px'; vizElementPred.style.maxHeight='887px'; vizElementPred.style.height=(divElementPred.offsetWidth*0.75)+'px';
-        } else { 
-            vizElementPred.style.width='100%'; vizElementPred.style.height='1627px';
+        // --- 5. Tableau Universal Loader ---
+        function initTableau() {
+            // Find all placeholders on the page
+            const placeholders = document.querySelectorAll('.tableauPlaceholder');
+            
+            placeholders.forEach(divElement => {
+                const vizElement = divElement.getElementsByTagName('object')[0];
+                if (!vizElement) return;
+
+                // Set standard responsive sizes
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '850px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '850px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '1350px';
+                }
+
+                // Inject the API script only once per element if not already present
+                if (!vizElement.parentNode.querySelector('script[src*="tableau"]')) {
+                    const scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                }
+            });
         }
-        
-        var scriptElementPred = document.createElement('script');
-        scriptElementPred.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElementPred.parentNode.insertBefore(scriptElementPred, vizElementPred);
+
+        // Initialize Everything
+        window.onload = function() {
+            loadAllSqlTables();
+            initTableau();
+        };
+
+        // Re-adjust Tableau on resize
+        window.addEventListener('resize', initTableau);
 
     </script>
 </body>
