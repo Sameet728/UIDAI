@@ -210,73 +210,96 @@
 
             <br>
 
-            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-                style="animation-delay: 0.1s;">
+           <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up" 
+     style="animation-delay: 0.1s;">
 
-                <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-                    <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-                        <span class="text-lg">💡</span>
-                    </div>
-                    <div>
-                        <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                            Key Insights
-                        </h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            • Most Aadhaar activity comes from updates, not new enrolments.<br>
-                            • Service load is uneven across districts.<br>
-                            • Transaction volumes show high monthly fluctuations.
-                        </p>
-                    </div>
-                </div>
+    <div class="bg-white relative border-b border-slate-100">
 
-                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-                    <div class='tableauPlaceholder' id='viz-tableau-2' style='position: relative'>
-                        <noscript>
-                            <a href='#'>
-                                <img alt='Aadhaar Operations Health &amp; Risk Monitor' src='https://public.tableau.com/static/images/Ui/Uidai/AadhaarOperationsHealthRiskMonitor/1_rss.png' style='border: none' />
-                            </a>
-                        </noscript>
-                        <object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='site_root' value='' />
-                            <param name='name' value='Uidai/AadhaarOperationsHealthRiskMonitor' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https://public.tableau.com/static/images/Ui/Uidai/AadhaarOperationsHealthRiskMonitor/1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
+        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-6 flex items-start gap-4">
+        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+            <span class="text-lg">💡</span>
+        </div>
+        <div>
+            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-2">
+                Key Insights
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                • Most Aadhaar activity comes from updates, not new enrolments.<br>
+                • Service load is uneven across districts.<br>
+                • Transaction volumes show high monthly fluctuations.
+            </p>
+        </div>
+    </div>
+        <div class='tableauPlaceholder' id='viz-tableau-2' style='position: relative; width: 100%;'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Aadhaar Operations Health &amp; Risk Monitor' src='https://public.tableau.com/static/images/Ui/Uidai/AadhaarOperationsHealthRiskMonitor/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='Uidai/AadhaarOperationsHealthRiskMonitor' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Ui/Uidai/AadhaarOperationsHealthRiskMonitor/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
 
-                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-                    <div class="md:w-1/2 pt-4 md:pt-0">
-                        <h4 class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <span>⚠️</span> Problem Statement
-                        </h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            • Records can become outdated, causing verification issues.<br>
-                            • Some districts face overcrowding and delays. <br>
-                            • Sudden demand spikes strain infrastructure.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2 pt-4 md:pt-0 md:pl-6">
-                        <h4 class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <span>🚀</span> Proposed Solution
-                        </h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            • <strong>Use machine learning to predict</strong> users likely to need Aadhaar updates.<br>
-                            • <strong>Continuously analyze district-level data</strong> to dynamically redistribute staff.<br>
-                            • <strong>Apply time-series forecasting</strong> to predict demand spikes.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz-tableau-2');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; 
+            } else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; 
+            } else { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='500px'; 
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+
+    
+
+    <div class="bg-indigo-50/30 px-8 py-8 grid md:grid-cols-2 gap-8 divide-y md:divide-y-0 md:divide-x divide-indigo-200/50">
+        
+        <div class="md:pr-4">
+            <h4 class="font-display font-bold text-red-700 text-sm uppercase tracking-wide mb-3 flex items-center gap-2">
+                <span>⚠️</span> Problem Statement
+            </h4>
+            <p class="text-sm text-slate-600 leading-relaxed space-y-1">
+                • Records can become outdated, causing verification issues.<br>
+                • Some districts face overcrowding and delays.<br>
+                • Sudden demand spikes strain infrastructure.
+            </p>
+        </div>
+
+        <div class="pt-6 md:pt-0 md:pl-8">
+            <h4 class="font-display font-bold text-teal-700 text-sm uppercase tracking-wide mb-3 flex items-center gap-2">
+                <span>🚀</span> Proposed Solution
+            </h4>
+            <p class="text-sm text-slate-600 leading-relaxed space-y-1">
+                • <strong>Use machine learning</strong> to predict users likely to need updates.<br>
+                • <strong>Continuously analyze</strong> district-level data to redistribute staff.<br>
+                • <strong>Apply forecasting</strong> to predict demand spikes.
+            </p>
+        </div>
+
+    </div>
+</div>
 
             <br>
             
@@ -526,137 +549,203 @@
 
         <div id="content-predictive" class="hidden opacity-0 transition-all duration-500 ease-in-out space-y-8">
 
-            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-                style="animation-delay: 0.1s;">
-                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-                    <div class='tableauPlaceholder' id='viz-predictive-1' style='position: relative'>
-                        <noscript>
-                            <a href='#'>
-                                <img alt='Predictive Analysis: State-wise Total Enrollment' src='https://public.tableau.com/static/images/8Q/8Q99R7YGQ/1_rss.png' style='border: none' />
-                            </a>
-                        </noscript>
-                        <object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='path' value='shared/8Q99R7YGQ' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https://public.tableau.com/static/images/8Q/8Q99R7YGQ/1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
-                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-                    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-                            <span class="text-lg">💡</span>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                                Key Insights
-                            </h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                • The forecast shows a strong geographic concentration of enrollments, with Uttar Pradesh emerging as the highest-demand state, indicating sustained population-driven service pressure.<br>
-                                • Southern and western states display moderate but stable predicted volumes, suggesting balanced growth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up" 
+     style="animation-delay: 0.1s;">
+    
+    <div class="bg-white relative border-b border-slate-100">
+        
+        <div class='tableauPlaceholder' id='viz-predictive-1' style='position: relative; width: 100%;'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Predictive Analysis: State-wise Total Enrollment' src='https://public.tableau.com/static/images/8Q/8Q99R7YGQ/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared/8Q99R7YGQ' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/8Q/8Q99R7YGQ/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz-predictive-1');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; // Sets ideal height for desktop
+            } else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; // Sets ideal height for tablet
+            } else { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='500px'; // Sets ideal height for mobile
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+    </div>
+
+    <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                <span class="text-lg">💡</span>
             </div>
+            <div>
+                <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                    Key Insights
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    • The forecast shows a strong geographic concentration of enrollments, with Uttar Pradesh emerging as the highest-demand state, indicating sustained population-driven service pressure.<br>
+                    • Southern and western states display moderate but stable predicted volumes, suggesting balanced growth.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
             <br>
 
-            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-                style="animation-delay: 0.1s;">
-                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-                    <div class='tableauPlaceholder' id='viz-predictive-2' style='position: relative'>
-                        <noscript>
-                            <a href='#'>
-                                <img alt='Predictive Analysis : Statewise Total Biometric Updates' src='https://public.tableau.com/static/images/SZ/SZ9XYHQMP/1_rss.png' style='border: none' />
-                            </a>
-                        </noscript>
-                        <object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='path' value='shared/SZ9XYHQMP' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https://public.tableau.com/static/images/SZ/SZ9XYHQMP/1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
-                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-                    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-                            <span class="text-lg">💡</span>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                                Key Insights
-                            </h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                • The forecast highlights extreme concentration of biometric update demand in high-population states like Uttar Pradesh and Maharashtra.<br>
-                                • Mid-tier states show balanced, predictable volumes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+         <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up" 
+     style="animation-delay: 0.1s;">
+    
+    <div class="bg-white relative border-b border-slate-100">
+        
+        <div class='tableauPlaceholder' id='viz-predictive-2' style='position: relative; width: 100%;'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Predictive Analysis : Statewise Total Biometric Updates' src='https://public.tableau.com/static/images/SZ/SZ9XYHQMP/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared/SZ9XYHQMP' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/SZ/SZ9XYHQMP/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz-predictive-2');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; 
+            } else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; 
+            } else { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='500px'; 
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+    </div>
+
+    <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                <span class="text-lg">💡</span>
             </div>
+            <div>
+                <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                    Key Insights
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    • The forecast highlights extreme concentration of biometric update demand in high-population states like Uttar Pradesh and Maharashtra.<br>
+                    • Mid-tier states show balanced, predictable volumes.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
             <br>
 
-            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up"
-                style="animation-delay: 0.1s;">
-                <div class="bg-white relative min-h-[600px] border-b border-slate-100">
-                    <div class='tableauPlaceholder' id='viz-predictive-3' style='position: relative'>
-                        <noscript>
-                            <a href='#'>
-                                <img alt='Predictive Analysis: Statewise Total Demographics Updates' src='https://public.tableau.com/static/images/Pr/PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1/1_rss.png' style='border: none' />
-                            </a>
-                        </noscript>
-                        <object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='site_root' value='' />
-                            <param name='name' value='PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https://public.tableau.com/static/images/Pr/PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1/1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
-                <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
-                    <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
-                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
-                            <span class="text-lg">💡</span>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
-                                Key Insights
-                            </h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                • A few large states dominate demographic update demand due to population size and frequent lifecycle changes. <br>
-                                • Smaller states and UTs have low but stable demand.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+           <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden ring-1 ring-slate-900/5 animate-fade-in-up" 
+     style="animation-delay: 0.1s;">
+    
+    <div class="bg-white relative border-b border-slate-100">
+        
+        <div class='tableauPlaceholder' id='viz-predictive-3' style='position: relative; width: 100%;'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Predictive Analysis: Statewise Total Demographics Updates' src='https://public.tableau.com/static/images/Pr/PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Pr/PredictiveAnalysisStatewiseTotalDemographicsUpdates/Sheet1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz-predictive-3');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; 
+            } else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='600px'; 
+            } else { 
+                vizElement.style.width='100%'; 
+                vizElement.style.height='500px'; 
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+    </div>
+
+    <div class="bg-indigo-50/30 px-8 py-5 flex flex-col md:flex-row gap-6 divide-y md:divide-y-0 md:divide-x divide-indigo-100">
+        <div class="bg-slate-50/80 backdrop-blur border-b border-slate-100 px-8 py-5 flex items-start gap-4">
+            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0">
+                <span class="text-lg">💡</span>
             </div>
+            <div>
+                <h3 class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">
+                    Key Insights
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    • A few large states dominate demographic update demand due to population size and frequent lifecycle changes. <br>
+                    • Smaller states and UTs have low but stable demand.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
 
